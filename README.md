@@ -1,7 +1,7 @@
 # Pallav Portfolio
 
 A simple personal portfolio website built with HTML, CSS, and JavaScript.
-
+AV7001/Portfolio
 ---
 
 ## Table of Contents
@@ -77,13 +77,10 @@ Contributions are welcome. Suggested workflow:
 2. Create a feature branch
 3. Submit a Pull Request
 
-## License
-This project is available under the MIT License. Replace or add a `LICENSE` file if you prefer a different license.
-
 ## Contact
 **Author:** Pallav
-- GitHub: `https://github.com/<your-github-username>`
-- Email: `<your-email@domain.com>`
+- GitHub: `https://github.com/AV7001`
+- Email: `pallavkarn199@gmail.com`
 
 
 ---
