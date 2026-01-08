@@ -21,7 +21,7 @@ AV7001/Portfolio
 This repository contains the source files for a personal portfolio website. It showcases projects, images, and contact information. The site is built with plain HTML, CSS, and JavaScript and is suitable for quick deployment to static hosting.
 
 ## Demo
-Open `Pallav Portfolio/index.html` in your browser to view the site locally.
+(https://av7001.github.io/Portfolio/)
 
 ## Features
 - Responsive layout
