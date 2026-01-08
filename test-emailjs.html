@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test</title>
+</head>
+<body>
+    <h1>EmailJS Test</h1>
+    <form id="test-form">
+        <input type="text" name="fullname" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit">Send Test Message</button>
+    </form>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/emailjs.min.js"></script>
+    <script>
+        console.log("Loading EmailJS test page...");
+
+        (function() {
+            console.log("Initializing EmailJS...");
+            try {
+                emailjs.init("5skUeGQsPUWWQVC3W");
+                console.log("EmailJS initialized successfully");
+            } catch (error) {
+                console.error("EmailJS initialization failed:", error);
+            }
+        })();
+
+        document.getElementById('test-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            console.log("Test form submitted, starting EmailJS send...");
+
+            const btn = this.querySelector('button');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            emailjs.sendForm(
+                "service_epwyg27",
+                "template_l7xffoa",
+                this
+            )
+            .then((response) => {
+                console.log("EmailJS success:", response);
+                alert("✅ Message sent successfully!");
+                this.reset();
+                btn.textContent = "Send Test Message";
+                btn.disabled = false;
+            })
+            .catch(error => {
+                console.error("EmailJS error:", error);
+                alert("❌ Failed to send message. Check console for details.");
+                btn.textContent = "Send Test Message";
+                btn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
